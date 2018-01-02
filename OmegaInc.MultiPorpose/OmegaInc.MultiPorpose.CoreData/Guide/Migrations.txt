@@ -1,0 +1,13 @@
+﻿*Cria uma migration*
+Add-Migration NomedaMigration -ProjectName OmegaInc.MultiPorpose.CoreData -StartUpProjectName OmegaInc.MultiPorpose.CoreData
+
+*Atualiza a base*
+Update-Database -ProjectName OmegaInc.MultiPorpose.CoreData -StartUpProjectName OmegaInc.MultiPorpose.CoreData -Verbose
+
+*Cria arquivo sql*
+Update-Database -Script -SourceMigration:0 -StartUpProjectName OmegaInc.MultiPorpose.CoreData -ProjectName OmegaInc.MultiPorpose.CoreData
+
+
+* Problemas com The model backing the 'MyDbContext' context has changed since the database was created. Consider using Code First Migrations to update the database (http://go.microsoft.com/fwlink/?LinkId=238269).
+* rodar o comando: 
+Update-Database -ProjectName OmegaInc.MultiPorpose.CoreData -Verbose

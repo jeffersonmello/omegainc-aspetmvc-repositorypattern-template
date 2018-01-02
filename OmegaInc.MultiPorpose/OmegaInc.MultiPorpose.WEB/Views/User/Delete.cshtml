@@ -1,0 +1,47 @@
+﻿@model OmegaInc.MultiPorpose.WEB.ViewModels.Example.UserIndexViewModel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="~/Scripts/sendform.js"></script>
+
+<script>
+    var btnAcao = $("input[type='button']");
+    var formulario = $("#formGeral");
+
+    $(document).ready(function () {
+        formulario.validate().settings.ignore = "";
+    });
+</script>
+
+@{
+    Layout = null;
+    ViewBag.Title = "Delete";
+}
+
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">Excluir User</h4>
+        </div>
+        <div class="modal-body">
+            <div>
+                <h4>Você tem certeza que deseja excluir User <b class="text-danger">@Html.DisplayFor(model => model.Name)</b>?</h4>
+            </div>
+        </div>
+        @using (Html.BeginForm("Delete", "User", FormMethod.Post, new { id = "formGeral" }))
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="modal-footer">
+                <input type="button" value="Sim, excluir" class="btn btn-danger" />
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+            </div>
+        }
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

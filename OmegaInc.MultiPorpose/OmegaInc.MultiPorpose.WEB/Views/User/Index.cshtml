@@ -1,0 +1,150 @@
+﻿@model IEnumerable<OmegaInc.MultiPorpose.WEB.ViewModels.Example.UserIndexViewModel>
+
+@{
+    ViewBag.Title = "Manutenção de User";
+}
+
+<section class="">
+    <header class="content__title">
+        <h1>Manutenção de User</h1>
+        <div class="actions">
+            <button class="btn btn-secondary btn--icon-text waves-effect create"><i class="fa fa-plus" aria-hidden="true"></i> Novo</button>
+            <button class="btn btn-secondary btn--icon-text waves-effect edit" disabled><i class="fa fa-pencil" aria-hidden="true"></i> Editar</button>
+            <button class="btn btn-secondary btn--icon-text waves-effect delete" disabled><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
+        </div>
+    </header>
+
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table id="gridDados" class="table-bordered table-hover" width="90%">
+                    <thead>
+                        <tr>
+                            <th data-column-id="Id" data-type="numeric" data-identifier="true">Código</th>
+                            <th data-column-id="Name" data-order="asc">
+                                @Html.DisplayNameFor(model => model.Name)
+                            </th>
+                            <th data-column-id="Email">
+                                @Html.DisplayNameFor(model => model.Email)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <br />
+    </div>
+</section>
+
+
+
+
+<!-- Modal Large -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-hidden="true">
+
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/erp.bootgrid.js"></script>
+    <script type="text/javascript">
+        var rowId = 0;
+
+        app.ApplicationConfig.currentPageTitle = (" - " +  "@ViewBag.Title");
+
+
+        var pageready = function () {
+            $('.selectpicker').selectpicker({
+                size: 4
+            });
+
+            $("body").on("blur", ".form-control", function () {
+                var p = $(this).closest(".form-group, .input-group"),
+                i = p.find(".form-control").val();
+                p.hasClass("fg-float") ? 0 == i.length && $(this).closest(".fg-line").removeClass("fg-toggled") : $(this).closest(".fg-line").removeClass("fg-toggled")
+            });
+
+            $(".fg-float")[0] && $(".fg-float .form-control").each(function () {
+                var i = $(this).val();
+                0 == !i.length && $(this).closest(".fg-line").addClass("fg-toggled")
+            });
+        }
+
+        var openModal = function () {
+            $("#modal").modal();
+            pageready();
+        }
+
+        $(".create").click(function () {
+            $("#modal").load("/User/Create/", function () {
+                openModal();
+            });
+        });
+
+        $(".edit").click(function () {
+            $("#modal").load("/User/Edit?id=" + rowId, function () {
+                openModal();
+            })
+        });
+
+        $(".delete").click(function () {
+            $("#modal").load("/User/Delete/" + rowId, function () {
+                openModal();
+            })
+        });
+
+        function prepareButtons(option) {
+            var btnDetails = $(".details"),
+                btnEdit = $(".edit"),
+                btnDelete = $(".delete");
+
+            switch (option) {
+                case 'disable':
+                    btnDetails.prop("disabled", true);
+                    btnEdit.prop("disabled", true);
+                    btnDelete.prop("disabled", true);
+                    break;
+                case 'enable':
+                    btnDetails.prop("disabled", false);
+                    btnEdit.prop("disabled", false);
+                    btnDelete.prop("disabled", false);
+                    break;
+            }
+        }
+
+        $(document).ready(function () {
+
+
+            var grid = $("#gridDados").bootgrid({
+                ajax: true,
+                url: "@Url.Action("GetAll")",
+                selection: true,
+                multiSelect: false,
+                rowSelect: true,
+                keepSelection: true,
+                labels: defaultGridTranslation,
+                templates: {
+                    search: ""
+                },
+            }).on("selected.rs.jquery.bootgrid", function (e, rows) {
+                for (var i = 0; i < rows.length; i++) {
+                    rowId = (rows[i].Id);
+                }
+                if (rowId != 0) {
+                    prepareButtons('enable');
+                } else {
+                    prepareButtons('disable');
+                }
+
+            }).on("deselected.rs.jquery.bootgrid", function (e, rows) {
+                rowId = 0;
+                prepareButtons('disable');
+            }).on("loaded.rs.jquery.bootgrid", function (e) {
+                $(".select-cell").hide();
+            });
+        });
+
+
+    </script>
+    @Scripts.Render("~/bundles/jqueryval")
+}

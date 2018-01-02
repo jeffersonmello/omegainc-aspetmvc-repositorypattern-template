@@ -1,0 +1,78 @@
+﻿@model OmegaInc.MultiPorpose.WEB.ViewModels.Example.UserViewModel
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/sendform.js"></script>
+
+<script>
+    var btnAcao = $("input[type='button']");
+    var formulario = $("#formGeral");
+
+    $(document).ready(function () {
+        formulario.validate().settings.ignore = "";
+    });
+</script>
+
+@{
+    Layout = null;
+    ViewBag.Title = "Create";
+}
+<!--MODAL-->
+<div class="modal-dialog">
+    <div class="modal-content">
+        @using (Html.BeginForm("Create", "User", FormMethod.Post, new { id = "formGeral" }))
+        {
+            <div class="modal-header">
+                <h4 class="modal-title">Cadastro de User</h4>
+            </div>
+            @Html.AntiForgeryToken()
+            <div class="modal-body">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div hidden class="alert alert-danger" role="alert">
+                    Ocorreram erros de validação, cheque todos os dados.
+                </div>
+
+                <!-- DIV TABS -->
+                <div role="tabpanel" class="tab-container">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a href="#dados" class="nav-link active" data-toggle="tab" role="tab">Dados Principais</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active fade show" id="dados">
+                            <div class="form-horizontal">
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label" })
+
+                                    <div class="fg-line">
+                                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+
+                                    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                </div>
+
+                                <div class="form-group">
+                                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label" })
+
+                                    <div class="fg-line">
+                                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="button" value="Salvar" class="btn btn-success" />
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            </div>
+        }
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

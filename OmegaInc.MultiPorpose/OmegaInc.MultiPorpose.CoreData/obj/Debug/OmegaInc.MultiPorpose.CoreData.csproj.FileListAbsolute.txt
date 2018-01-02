@@ -1,0 +1,16 @@
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\OmegaInc.MultiPorpose.CoreData.dll.config
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\OmegaInc.MultiPorpose.CoreData.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\OmegaInc.MultiPorpose.CoreData.pdb
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\EntityFramework.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\OmegaInc.Common.Entity.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\OmegaInc.MultiPorpose.Data.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\OmegaInc.MultiPorpose.Data.pdb
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\EntityFramework.xml
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\bin\Debug\EntityFramework.SqlServer.xml
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\obj\Debug\OmegaInc.MultiPorpose.CoreData.csprojResolveAssemblyReference.cache
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\obj\Debug\OmegaInc.MultiPorpose.CoreData.Migrations.UsersTable.resources
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\obj\Debug\OmegaInc.MultiPorpose.CoreData.csproj.GenerateResource.Cache
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\obj\Debug\OmegaInc.MultiPorpose.CoreData.csproj.CoreCompileInputs.cache
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\obj\Debug\OmegaInc.MultiPorpose.CoreData.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.CoreData\obj\Debug\OmegaInc.MultiPorpose.CoreData.pdb

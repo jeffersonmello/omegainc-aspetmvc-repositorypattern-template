@@ -1,0 +1,5 @@
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.Data\bin\Debug\OmegaInc.MultiPorpose.Data.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.Data\bin\Debug\OmegaInc.MultiPorpose.Data.pdb
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.Data\obj\Debug\OmegaInc.MultiPorpose.Data.csproj.CoreCompileInputs.cache
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.Data\obj\Debug\OmegaInc.MultiPorpose.Data.dll
+D:\Dropbox\Programacao\Web\omegainc-aspetmvc-repositorypattern-template\OmegaInc.MultiPorpose\OmegaInc.MultiPorpose.Data\obj\Debug\OmegaInc.MultiPorpose.Data.pdb
